@@ -18,12 +18,7 @@ export function Character({ agent, onSelect, delay = 0 }: Props) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay, ease: [0.4, 0, 0.2, 1] }}
       onClick={onSelect}
-      className="absolute group cursor-pointer focus:outline-none"
-      style={{
-        left: `${agent.position.x}%`,
-        top: `${agent.position.y}%`,
-        transform: "translate(-50%, -50%)",
-      }}
+      className="relative group cursor-pointer focus:outline-none flex flex-col items-center"
       aria-label={`Abrir entregable de ${agent.role}`}
     >
       {/* Floor shadow */}
@@ -55,7 +50,7 @@ export function Character({ agent, onSelect, delay = 0 }: Props) {
 
       {/* Label card */}
       <motion.div
-        className="absolute left-1/2 -translate-x-1/2 -bottom-16 w-52 bg-bg-card/95 backdrop-blur border rounded-md px-4 py-3 corner-accents card-stripe"
+        className="mt-2 w-52 bg-bg-card/95 backdrop-blur border rounded-md px-4 py-3 corner-accents card-stripe"
         style={{ borderColor: `${accent}66` }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
