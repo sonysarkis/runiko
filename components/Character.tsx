@@ -55,7 +55,7 @@ export function Character({ agent, onSelect, delay = 0 }: Props) {
 
       {/* Label card */}
       <motion.div
-        className="absolute left-1/2 -translate-x-1/2 -bottom-24 w-56 bg-bg-card/95 backdrop-blur border rounded-md px-4 py-3 corner-accents card-stripe"
+        className="absolute left-1/2 -translate-x-1/2 -bottom-16 w-52 bg-bg-card/95 backdrop-blur border rounded-md px-4 py-3 corner-accents card-stripe"
         style={{ borderColor: `${accent}66` }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

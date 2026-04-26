@@ -30,12 +30,12 @@ export function OfficeScene({ contents }: Props) {
       <div className="absolute inset-0 scanline pointer-events-none mix-blend-overlay" />
 
       {/* Section label */}
-      <div className="absolute top-24 left-1/2 -translate-x-1/2 z-10 text-center">
-        <div className="section-label mb-2">Oficina Virtual · Equipo Asignado</div>
-        <h1 className="font-display font-bold text-3xl md:text-4xl text-text-primary tracking-wider">
+      <div className="absolute top-20 left-1/2 -translate-x-1/2 z-10 text-center px-4">
+        <div className="section-label mb-1.5">Oficina Virtual · Equipo Asignado</div>
+        <h1 className="font-display font-bold text-2xl md:text-3xl text-text-primary tracking-wider">
           PROYECTO <span className="text-gold text-glow-gold">RUNIKO</span>
         </h1>
-        <p className="font-body text-sm text-text-muted mt-2 max-w-xl mx-auto">
+        <p className="font-body text-xs md:text-sm text-text-muted mt-1.5 max-w-xl mx-auto">
           Tres agentes especializados trabajaron en paralelo. Click en cada uno para abrir su entregable.
         </p>
       </div>
@@ -53,7 +53,7 @@ export function OfficeScene({ contents }: Props) {
       </div>
 
       {/* Footer hint */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 text-center">
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 text-center">
         <div className="font-sub uppercase tracking-[3px] text-[10px] text-text-vmuted">
           Sistema operacional · Supernova Lab
         </div>
