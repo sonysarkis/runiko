@@ -1,9 +1,53 @@
+# dependencies
 node_modules/
-.next/
-out/
-.env*.local
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+Thumbs.db
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
 .vercel
+
+# typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE / editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Claude Code (local plugin, not part of the app)
+.claude/
+
+# OS
 .DS_Store
-.claude/superpowers/
+desktop.ini
