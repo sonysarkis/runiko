@@ -41,7 +41,7 @@ export function OfficeScene({ contents }: Props) {
       </div>
 
       {/* Office "stage" — flex layout guarantees true horizontal centering */}
-      <div className="absolute inset-x-0 top-0 bottom-0 z-10 flex items-center justify-center gap-8 md:gap-16 lg:gap-24 px-8">
+      <div className="absolute inset-x-0 top-0 bottom-0 z-10 flex items-center justify-center gap-8 md:gap-16 lg:gap-24 px-8 pt-48 md:pt-56 pb-12">
         {AGENTS.map((agent, i) => (
           <Character
             key={agent.id}
