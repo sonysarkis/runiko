@@ -84,8 +84,8 @@ export function AgentPanel({ agentId, contents, onClose }: Props) {
             </header>
 
             {/* Content */}
-            <div className="flex-1 overflow-y-auto px-6 py-6">
-              <article className="prose-runiko">
+            <div className="flex-1 overflow-y-auto overflow-x-hidden px-6 py-6">
+              <article className="prose-runiko max-w-full">
                 <ReactMarkdown remarkPlugins={[remarkGfm]}>
                   {contents[agent.id]}
                 </ReactMarkdown>
