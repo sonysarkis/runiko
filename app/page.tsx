@@ -6,7 +6,7 @@ export default function HomePage() {
   const contents = getAllAgentContents();
 
   return (
-    <main className="relative w-screen h-screen overflow-hidden bg-bg-deep">
+    <main className="relative w-full min-h-screen md:h-screen md:overflow-hidden bg-bg-deep">
       <TopBar />
       <OfficeScene contents={contents} />
     </main>
