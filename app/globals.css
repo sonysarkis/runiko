@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Orbitron:wght@400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  background: #111111;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+@layer components {
+  .font-display { font-family: 'Orbitron', sans-serif; }
+  .font-sub { font-family: 'Rajdhani', sans-serif; }
+
+  .section-label {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #888888;
+    text-transform: uppercase;
+  }
+
+  .badge {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .badge-active {
+    background: rgba(245,197,24,0.15);
+    border-color: rgba(245,197,24,0.4);
+    color: #F5C518;
+  }
+
+  .badge-building {
+    background: rgba(59,130,246,0.15);
+    border-color: rgba(59,130,246,0.4);
+    color: #60a5fa;
+  }
+
+  .corner-accents {
+    position: relative;
+  }
+
+  .corner-accents::before,
+  .corner-accents::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-color: #F5C518;
+    pointer-events: none;
+  }
+
+  .corner-accents::before {
+    top: 0;
+    left: 0;
+    border-top: 2px solid;
+    border-left: 2px solid;
+  }
+
+  .corner-accents::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+  }
+
+  .card-stripe::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #F5C518;
+    opacity: 0.5;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(245,197,24,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(245,197,24,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .scanline {
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(245,197,24,0.03) 50%,
+      transparent 100%
+    );
+  }
+
+  .text-glow-gold {
+    text-shadow: 0 0 18px rgba(245,197,24,0.6);
+  }
+
+  .text-glow-metric {
+    text-shadow: 0 0 20px rgba(245,197,24,0.4);
+  }
+}
+
+/* Markdown content styles for agent panel */
+.prose-runiko {
+  color: #CCCCCC;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.prose-runiko h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #FFFFFF;
+  margin: 24px 0 12px;
+  text-shadow: 0 0 14px rgba(245,197,24,0.3);
+}
+.prose-runiko h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #F5C518;
+  margin: 28px 0 10px;
+  padding-top: 16px;
+  border-top: 1px solid #2A2A2A;
+  letter-spacing: 0.5px;
+}
+.prose-runiko h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #FFFFFF;
+  margin: 18px 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.prose-runiko h4 {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: #F5C518;
+  margin: 14px 0 6px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.prose-runiko p { margin: 10px 0; }
+.prose-runiko strong { color: #FFFFFF; font-weight: 600; }
+.prose-runiko em { color: #F5C518; font-style: normal; font-weight: 500; }
+.prose-runiko a { color: #F5C518; text-decoration: underline; }
+.prose-runiko a:hover { color: #FFD700; }
+.prose-runiko ul, .prose-runiko ol { margin: 10px 0; padding-left: 22px; }
+.prose-runiko li { margin: 4px 0; }
+.prose-runiko ul > li::marker { color: #F5C518; }
+.prose-runiko ol > li::marker { color: #F5C518; font-weight: 600; }
+.prose-runiko code {
+  font-family: 'Courier New', monospace;
+  background: #111111;
+  color: #F5C518;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 12px;
+  border: 1px solid #2A2A2A;
+}
+.prose-runiko pre {
+  background: #0a0a0a;
+  border: 1px solid #2A2A2A;
+  border-left: 3px solid #F5C518;
+  padding: 14px 16px;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 14px 0;
+  font-size: 12px;
+}
+.prose-runiko pre code {
+  background: transparent;
+  border: none;
+  color: #CCCCCC;
+  padding: 0;
+}
+.prose-runiko blockquote {
+  border-left: 3px solid #F5C518;
+  background: rgba(245,197,24,0.06);
+  padding: 10px 16px;
+  margin: 14px 0;
+  color: #FFFFFF;
+  font-style: italic;
+}
+.prose-runiko table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+  font-size: 12px;
+}
+.prose-runiko th {
+  background: #111111;
+  color: #F5C518;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 10px;
+  text-align: left;
+  border: 1px solid #2A2A2A;
+  font-size: 11px;
+}
+.prose-runiko td {
+  padding: 8px 10px;
+  border: 1px solid #2A2A2A;
+  color: #CCCCCC;
+}
+.prose-runiko tr:nth-child(even) td { background: rgba(245,197,24,0.02); }
+.prose-runiko hr {
+  border: none;
+  border-top: 1px solid #2A2A2A;
+  margin: 24px 0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1A1A1A;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F5C518;
+}
